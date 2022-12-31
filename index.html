@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campo Harmônico</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body onload="iniciarTabela()">
+    <section id="sec_main" class="w3-margin">
+        <h1 class="">Campo Harmônico</h1>
+        <div class="w3-padding">
+            <label for="cmb_tom">Tom: </label>
+            <select name="cmb_tom" id="cmb_tom" onchange="atualizarCampoHarmonico()">
+            </select>
+            <br><br>
+
+            <input type="radio" name="opt_tipo" id="opt_maior" checked onclick="atualizarCampoHarmonico(true)">
+            <label for="opt_maior">Maior</label>
+            <br>
+            <input type="radio" name="opt_tipo" id="opt_menor" onclick="atualizarCampoHarmonico(false)">
+            <label for="opt_menor">Menor</label>
+        </div>
+        <div class="w3-padding w3-margin-top">
+            <table class="w3-table w3-centered w3-card">
+                <tbody>
+                    <tr class="w3-blue">
+                        <th>I</th><th>II</th><th>III</th><th>IV</th><th>V</th><th>VI</th><th>VII</th>
+                    </tr>
+                    <tr id="tab_linha"></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
